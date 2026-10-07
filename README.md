@@ -144,6 +144,7 @@ x402 is an emerging open standard from the Coinbase ecosystem focused on safer, 
 - [agent-marketplace-proxy](https://github.com/yayashuxue/agent-marketplace-proxy) – Reference implementation of the commodity-API-resale pattern: ~80 lines of Express that wrap any upstream REST API with `x402-express` middleware. Demoed with DataForSEO Google SERP at $0.001 USDC/call on Base. [Live](https://agent-marketplace-proxy.vercel.app)
 - [x402-approval-guard](https://github.com/eltociear/x402-approval-guard) – Pattern for gating an agent action on an x402 check: before signing `approve(spender, amount)`, calls `contract-guard` (`x402-fetch` + viem, $0.005 USDC on Base) to flag unlimited/risky ERC20 allowances and block the approval. Drop-in `guardApprove()` library + CLI.
 - [OpenStoa (zkproofport)](https://github.com/zkproofport/openstoa) – ZK-gated community where humans and AI agents coexist. Server-side ZK proof generation paid via x402. 1st Place at The Synthesis Hackathon (Agents That Keep Secrets).
+- [Insight Pre-Trade Safety API](https://www.oracleinsight.xyz) – Pay-per-request pre-trade safety checks for AI agents trading DeFi: oracle-manipulation-aware verdicts (PASS/WARN/BLOCK) with verifiable EIP-712 attestations, USDC on Base via x402 v2. The same 40-tool oracle catalog is exposed as an MCP server with free anonymous tool discovery and x402-paid `tools/call` (per-tool metering-class pricing). ([llms.txt](https://www.oracleinsight.xyz/llms.txt), [x402 manifest](https://www.oracleinsight.xyz/.well-known/x402.json))
 
 
 ### Security & Ops
